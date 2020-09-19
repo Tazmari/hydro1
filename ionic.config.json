@@ -1,0 +1,7 @@
+{
+  "name": "hydro1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
