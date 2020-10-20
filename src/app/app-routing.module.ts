@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'recorddata',
+    loadChildren: () => import('./recorddata/recorddata.module').then( m => m.RecorddataPageModule)
+  },
 ];
 
 @NgModule({
