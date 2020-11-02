@@ -7,14 +7,14 @@
 <ion-content>
   <ion-item>
     <ion-label>Select Plant</ion-label>
-    <ion-select (click)='getdets()'>
-    <ion-select-option  *ngFor="let item of pDetails | async">{{item.name}}</ion-select-option>
+    <ion-select >
+    <ion-select-option  *ngFor="let item of plant1 | async">{{item.name}}</ion-select-option>
   </ion-select>
   </ion-item>
   
-  <ion-item *ngFor="let item of pDetails | async">
-    <ion-label>PH High{{item.PHHigh}} PH Low {{item.PHLow}}</ion-label>
-    <ion-select value="0.0">
+  <!-- <ion-item *ngFor="let item of plant1 | async"> -->
+    <!-- <ion-label>PH High{{item.PHHigh}} PH Low {{item.PHLow}}</ion-label> -->
+    <!-- <ion-select value="0.0"> -->
       <!-- <ion-select-option value="5.5">5.5</ion-select-option>
       <ion-select-option value="5.6">5.6</ion-select-option>
       <ion-select-option value="5.7">5.7</ion-select-option>
@@ -26,8 +26,8 @@
       <ion-select-option value="6.3">6.3</ion-select-option>
       <ion-select-option value="6.4">6.4</ion-select-option>
       <ion-select-option value="6.5">6.5</ion-select-option> -->
-    </ion-select>
-  </ion-item>
+    <!-- </ion-select> -->
+  <!-- </ion-item> -->
   <ion-item>
     <ion-label>CF</ion-label>
     <ion-select value="0.0">

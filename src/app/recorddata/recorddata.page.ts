@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore} from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { PDetails, Plants1Service } from '../services/plants1.service';
+import { Plant1, Plants1Service } from '../services/plants1.service';
 
 
 
@@ -13,18 +13,18 @@ import { PDetails, Plants1Service } from '../services/plants1.service';
 
 export class RecorddataPage implements OnInit {
 
-  pDetails: Observable<PDetails[]>;
+  plant1: Observable<Plant1[]>;
   pDetailsKey: string;
 
   constructor(public plantsService: Plants1Service, public afs: AngularFirestore) {
   }
   ngOnInit() {
-    this.pDetails = this.plantsService.getPlantsDetails().valueChanges();
-    console.log(this.pDetails);
+    this.plant1 = this.plantsService.getPlantsDetails().valueChanges();
+    console.log(this.plant1);
 
   }
   getdets(){
-    this.afs.collection('plants1').doc<PDetails>(this.pDetailsKey).valueChanges().subscribe(data  => {
+    this.afs.collection('plants1').doc<Plant1>(this.pDetailsKey).valueChanges().subscribe(data  => {
     });
 
   }
